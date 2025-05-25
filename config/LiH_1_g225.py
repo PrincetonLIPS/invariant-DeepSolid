@@ -29,7 +29,7 @@ def get_config(base_cfg, cfg_str='Li,H,4.02,1,ccpvdz'):
     cfg.system.pyscf_cell.L_Bohr = L_Bohr
 
     # group used for performing averaging
-    cfg.symmetria.gpave.translate = True
+    cfg.symmetria.gpave.translate = False
     cfg.symmetria.gpave.group = get_group(
         plane_or_space='space',
         group_index=225,
@@ -40,7 +40,7 @@ def get_config(base_cfg, cfg_str='Li,H,4.02,1,ccpvdz'):
     )
 
     # group used for performing augmentation
-    cfg.symmetria.augment.translate = True
+    cfg.symmetria.augment.translate = False
     cfg.symmetria.augment.group = get_group(
         plane_or_space='space',
         group_index=225,
@@ -51,7 +51,7 @@ def get_config(base_cfg, cfg_str='Li,H,4.02,1,ccpvdz'):
     )
 
     # group used for computing symmetry measure
-    cfg.symmetria.measure.translate = True
+    cfg.symmetria.measure.translate = False
     cfg.symmetria.measure.group = get_group(
         plane_or_space='space',
         group_index=225,
