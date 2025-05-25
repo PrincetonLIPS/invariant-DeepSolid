@@ -32,14 +32,14 @@ def get_config(base_cfg, cfg_str='config/poscar/bcc_li.vasp,2,ccpvdz'):
     cfg.system.pyscf_cell.L_Bohr = L_Bohr
 
     
-    # group used for orbifold layer
+    # group used for symmetrisations
     group = get_group(
         plane_or_space='space',
         group_index=229,
         unit_cell=cell.a,
         S=np.diagonal(S),
         L_Bohr=L_Bohr,
-        translate=True,
+        translate=False,
     )
 
     # group used for performing averaging
